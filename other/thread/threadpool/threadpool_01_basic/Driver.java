@@ -1,4 +1,4 @@
-package threadpool.threadpool_01_basic;
+package other.thread.threadpool.threadpool_01_basic;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

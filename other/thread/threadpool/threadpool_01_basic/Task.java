@@ -1,4 +1,4 @@
-package threadpool.threadpool_01_basic;
+package other.thread.threadpool.threadpool_01_basic;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
