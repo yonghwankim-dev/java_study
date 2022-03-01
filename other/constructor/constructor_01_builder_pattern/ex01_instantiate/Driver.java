@@ -8,7 +8,5 @@ public class Driver {
 		Student std1 = new Student(1, "ȫ�浿", null, 20);
 		
 		System.out.println(std1);
-
 	}
-
 }
