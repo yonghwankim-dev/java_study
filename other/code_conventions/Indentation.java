@@ -52,12 +52,17 @@ public class Indentation {
 
 		if((isCondition1 && isCondition2)
 				|| (isCondition3 && isCondition4)
-				|| (isCondition5 && isCondition6)) {	// 잘못된 방식
+				|| (isCondition5 && isCondition6)) {	// 이 방식으로 대체 1
 			someMethod3();
 		}
-		
+
+		if((isCondition1 && isCondition2) || (isCondition3 && isCondition4)
+				|| (isCondition5 && isCondition6)) {	// 이 방식으로 대체 2
+			someMethod3();
+		}
 	}
 	
+	/* 메소드 선언 부문 줄바꿈 방식*/
 	int someMethod1(int argument1, int argument2, int argument3, int argument4,
 					int argument5, int argument6) {
 		return argument1 + argument2;
