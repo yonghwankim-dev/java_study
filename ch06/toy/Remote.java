@@ -16,7 +16,7 @@ public class Remote {
 	 */
 	public static void showMenu()
 	{
-		System.out.println("메뉴를 선택하십시오");
+		System.out.println("메뉴를 선택하십시오.");
 		System.out.println("1. 전원 켜기/끄기");
 		System.out.println("2. 채널업 버튼");
 		System.out.println("3. 채널다운 버튼");
@@ -86,4 +86,10 @@ public class Remote {
 			return false;
 		}
 	}
+
+
+	public void setTv(TV tv) {
+		this.tv = tv;
+	}
+	
 }
