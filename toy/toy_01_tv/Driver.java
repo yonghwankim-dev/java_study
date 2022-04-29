@@ -1,4 +1,4 @@
-package ch06.toy;
+package toy.toy_01_tv;
 
 import java.io.BufferedReader;
 import java.io.IOException;
