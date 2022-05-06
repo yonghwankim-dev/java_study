@@ -11,6 +11,9 @@
 1. [\[Java\] 7. 객체지향 프로그래밍 2 #1 상속(inheritance)](https://yonghwankim-dev.tistory.com/357)
 2. [\[Java\] 7. 객체지향 프로그래밍 2 #2 오버라이딩(overriding)](https://yonghwankim-dev.tistory.com/360)
 3. [\[Java\] 7. 객체지향 프로그래밍 2 #3 package와 import](https://yonghwankim-dev.tistory.com/361)
+4. [\[Java\] 7. 객체지향 프로그래밍 2 #4 제어자(modifier)](https://yonghwankim-dev.tistory.com/364)
+5. [\[Java\] 7. 객체지향 프로그래밍 2 #5 다형성(polymorphism)](https://yonghwankim-dev.tistory.com/365)
+
 
 
 
