@@ -13,6 +13,8 @@
 3. [\[Java\] 7. 객체지향 프로그래밍 2 #3 package와 import](https://yonghwankim-dev.tistory.com/361)
 4. [\[Java\] 7. 객체지향 프로그래밍 2 #4 제어자(modifier)](https://yonghwankim-dev.tistory.com/364)
 5. [\[Java\] 7. 객체지향 프로그래밍 2 #5 다형성(polymorphism)](https://yonghwankim-dev.tistory.com/365)
+6. [\[Java\] 7. 객체지향 프로그래밍 2 #6 추상클래스(abstract class)](https://yonghwankim-dev.tistory.com/368)
+7. [\[Java\] 7. 객체지향 프로그래밍 2 #7 인터페이스(interface)](https://yonghwankim-dev.tistory.com/370)
 
 
 
