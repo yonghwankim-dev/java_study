@@ -12,6 +12,6 @@ public abstract class Unit {
 
 	@Override
 	public String toString() {
-		return "Unit [name=" + name + ", hitPoint=" + hitPoint + ", MAX_HP=" + MAX_HP + "]";
+		return String.format("%s(%d/%d)", name, hitPoint, MAX_HP);
 	}	
 }

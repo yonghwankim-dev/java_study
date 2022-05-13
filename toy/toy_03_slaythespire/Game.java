@@ -224,7 +224,9 @@ public class Game {
 
 			// 적이 공격함
 			for(int i = 0; i < monsters.size(); i++) {
-				monsters.get(i).attack(hero);
+				Monster m = monsters.get(i);
+				m.attack(hero);
+				System.out.printf("%s attack you %d damage\n", m.name, m.damage);
 			}
 			
 			// 손패에 있는 카드를 묘지로 버림
