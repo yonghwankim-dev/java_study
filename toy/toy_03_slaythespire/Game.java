@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 import toy.toy_03_slaythespire.card.Card;
+import toy.toy_03_slaythespire.card.Card.KIND;
 import toy.toy_03_slaythespire.card.attack.Strike;
 import toy.toy_03_slaythespire.card.defense.Defend;
 import toy.toy_03_slaythespire.unit.Hero;
@@ -47,7 +48,7 @@ public class Game {
 	 */
 	private void initAttackDeck(List<Card> deck) {
 		for(int i = 0; i < 5; i++) {
-			deck.add(new Strike());
+			deck.add(Strike.Strike());
 		}
 	}
 	
@@ -57,7 +58,7 @@ public class Game {
 	 */
 	private void initDenfenseDeck(List<Card> deck) {
 		for(int i = 0; i < 4; i++) {
-			deck.add(new Defend());
+			deck.add(Defend.Defend());
 		}
 	}
 
@@ -207,7 +208,7 @@ public class Game {
 			// 카드 선택
 			Card card = choiceCard();
 			
-			if(card.getKind().equals("defends")) {
+			if(card.getKind() == KIND.DEFEND || card.getKind() == KIND.POWER) {
 				choice(card, hero);			
 			}else {
 				// 몬스터 선택

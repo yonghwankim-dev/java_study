@@ -8,7 +8,6 @@ public class Monster extends Unit implements Attackable{
 	public Monster(String name, int max_hp, int damage) {
 		super(name, max_hp);
 		this.damage = damage;
-		hitPoint = max_hp;
 	}
 	
 	@Override

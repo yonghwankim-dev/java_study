@@ -27,6 +27,10 @@ public abstract class Card {
 		return cost;
 	}
 
+	public KIND getKind() {
+		return kind;
+	}
+
 	@Override
 	public String toString() {
 		return String.format("%s(%d, %s)", name, cost, kind);

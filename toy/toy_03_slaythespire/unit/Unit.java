@@ -7,6 +7,7 @@ public abstract class Unit {
 	
 	public Unit(String name, int max_hp) {
 		this.name = name;
+		this.hitPoint = max_hp;
 		this.MAX_HP = max_hp;
 	}
 

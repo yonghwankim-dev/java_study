@@ -10,10 +10,8 @@ import toy.toy_03_slaythespire.strategy.CardUsable;
 
 public class Hero extends Unit implements CardUsable{
 
-
 	public Hero(int max_hp) {
 		super("Ironclad", max_hp);
-		hitPoint = MAX_HP;
 	}
 			
 	@Override
