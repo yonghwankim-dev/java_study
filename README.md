@@ -17,6 +17,9 @@
 7. [\[Java\] 7. 객체지향 프로그래밍 2 #7 인터페이스(interface)](https://yonghwankim-dev.tistory.com/370)
 8. [\[Java\] 7. 객체지향 프로그래밍 2 #8 내부 클래스(Inner Class)](https://yonghwankim-dev.tistory.com/384)
 
+### Chapter 8. 예외 처리(Exception Handling)
+
+1. [\[Java\] 8. 예외처리(exception handling)](https://yonghwankim-dev.tistory.com/427)
 
 
 
