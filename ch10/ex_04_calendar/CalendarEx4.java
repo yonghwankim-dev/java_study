@@ -1,4 +1,4 @@
-package ch10.ex_04_calendar4;
+package ch10.ex_04_calendar;
 
 import java.util.Calendar;
 

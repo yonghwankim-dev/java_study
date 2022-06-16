@@ -1,4 +1,4 @@
-package ch10.ex_06_calendar6;
+package ch10.ex_06_calendar;
 
 import java.io.BufferedReader;
 import java.io.IOException;
