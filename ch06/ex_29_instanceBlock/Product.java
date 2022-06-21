@@ -29,5 +29,7 @@ public class Product {
 		System.out.printf("p2의 제품번호(serialNo) = %d\n", p2.serialNo);
 		System.out.printf("p3의 제품번호(serialNo) = %d\n", p3.serialNo);
 		System.out.printf("현재 생상한 제품 수 = %d\n", Product.count);
+		
+		
 	}
 }

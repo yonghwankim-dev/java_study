@@ -28,9 +28,6 @@ public class ChoiceFormatEx1 {
 		for(int score : scores) {
 			System.out.println(score + ":" + cf.format(score));
 		}
-		
-		
-		
 	}
 
 }
