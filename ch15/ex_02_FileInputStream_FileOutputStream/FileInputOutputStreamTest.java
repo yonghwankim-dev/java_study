@@ -9,6 +9,10 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 public class FileInputOutputStreamTest {
+	void printMethodName(String methodName) {
+		System.out.println("==========" + methodName + "==========");
+	}
+	
 	/**
 	 * title : FileInputStream read() 메서드를 활용하여 파일 내용 보기
 	 * FileInputStream 인스턴스 메서드
@@ -22,6 +26,8 @@ public class FileInputOutputStreamTest {
 	@Order(1)
 	@Test
 	void fileViewerTest() throws IOException {
+		printMethodName("fileViewerTest");
+		
 		FileInputStream fis = new FileInputStream("./src/ch15/ex_02_FileInputStream_FileOutputStream/note.txt");
 		int data = 0;
 		
@@ -39,6 +45,7 @@ public class FileInputOutputStreamTest {
 	@Order(2)
 	@Test
 	void fileCopyTest(){
+		printMethodName("fileCopyTest");
 		
 		try(FileInputStream fis = new FileInputStream("./src/ch15/ex_02_FileInputStream_FileOutputStream/note.txt");
 				FileOutputStream fos = new FileOutputStream("./src/ch15/ex_02_FileInputStream_FileOutputStream/note_copy.txt")) {
@@ -53,5 +60,7 @@ public class FileInputOutputStreamTest {
 		}
 		
 	}
+	
+	
 	
 }
