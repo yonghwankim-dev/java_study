@@ -67,6 +67,7 @@ public class PrintStreamTest {
 		System.out.printf("%3d%3d%3d\n", 100, 90, 80);
 		System.out.println();
 		
+		
 		System.out.printf("123456789012345678901234567890\n");
 		System.out.printf("%s%-5s%5s%n", "123", "123", "123");
 		System.out.println();
