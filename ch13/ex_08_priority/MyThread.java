@@ -12,7 +12,7 @@ public class MyThread implements Runnable{
 		for(int i=0;i<300;i++)
 		{
 			System.out.print(s);
-			for(int x=0;x<1000;x++);
+			for(int x=0;x<1000000;x++);
 		}
 	}
 	

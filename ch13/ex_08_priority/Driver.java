@@ -17,7 +17,7 @@ public class Driver {
 		t2.setPriority(7);
 		
 		System.out.println("Priority of t1 (-) : " + t1.getPriority());
-		System.out.println("Priority of t2 (-) : " + t2.getPriority());
+		System.out.println("Priority of t2 (*) : " + t2.getPriority());
 		
 		t1.start();
 		t2.start();
