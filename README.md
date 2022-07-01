@@ -39,6 +39,8 @@
 6. [\[Java\]\[Thread\] 쓰레드 그룹(thread group)](https://yonghwankim-dev.tistory.com/466)
 7. [\[Java\]\[Thread\] 데몬 쓰레드(daemon thread)](https://yonghwankim-dev.tistory.com/467)
 8. [\[Java\]\[Thread\] 쓰레드의 실행 제어](https://yonghwankim-dev.tistory.com/468)
+9. [\[Java\]\[Thread\] 쓰레드의 동기화 #1 synchronized, wait, notify](https://yonghwankim-dev.tistory.com/469)
+
 
 
 
