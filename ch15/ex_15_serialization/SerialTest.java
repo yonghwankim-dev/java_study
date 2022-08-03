@@ -1,5 +1,7 @@
 package ch15.ex_15_serialization;
 
+import org.junit.Test;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
@@ -11,8 +13,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+
+
 
 public class SerialTest {
 	void printMethodName(String methodName) {
@@ -25,7 +27,7 @@ public class SerialTest {
 	 * ObjectOutputStream은 OutputStream을 직접 상속받지만 기반스트림을 필요로하는 보조스트림임
 	 * 
 	 */
-	@Order(1)
+	
 	@Test
 	void UserInfoSerialTest() {
 		printMethodName("UserInfoSerialTest");
@@ -63,7 +65,7 @@ public class SerialTest {
 	 * 
 	 * 역직렬화시 직렬화한 순서대로 해야함
 	 */
-	@Order(2)
+	
 	@Test
 	void UserInfoDeSerialTest() {
 		printMethodName("UserInfoDeSerialTest");
@@ -98,7 +100,7 @@ public class SerialTest {
 	 * 2. writeObject() 정의
 	 * 3. readObject() 정의  
 	 */
-	@Order(3)
+	
 	@Test
 	void StudentSerialTest() {
 		printMethodName("StudentSerialTest");
@@ -137,7 +139,7 @@ public class SerialTest {
 	 * title : 조상 클래스가 직렬화 인터페이스를 구현하지 않은 상태에서 자식 클래스가
 	 * 역직렬화하는 예제
 	 */
-	@Order(4)
+	
 	@Test
 	void StudentDeSerialTest() {
 		printMethodName("StudentDeSerialTest");

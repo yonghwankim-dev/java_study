@@ -1,18 +1,10 @@
 package ch15.ex_05_SequenceInputStream;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.io.SequenceInputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Vector;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import java.io.*;
+import java.util.Arrays;
+import java.util.Vector;
 
 public class SequenceInputStreamTest {
 	void printMethodName(String methodName) {
@@ -25,7 +17,7 @@ public class SequenceInputStreamTest {
 	 * SequenceInputStream(Enumeration e)                  : Enumeration에 지정된 순서대로 입력스트림을 하나의 스트림으로 연결
 	 * SequenceInputStream(InputStream s1, InputStream s2) : 두개의 입력스트림을 하나로 연결
 	 */
-	@Order(1)
+	
 	@Test
 	void sequenceInputStreamTest() {
 		byte[] arr1   = {0, 1, 2};
@@ -33,12 +25,12 @@ public class SequenceInputStreamTest {
 		byte[] arr3   = {6, 7, 8};
 		byte[] outSrc = null;
 		
-		Vector<InputStream> v = new Vector<InputStream>(); 
+		Vector<InputStream> v = new Vector<InputStream>();
 		v.add(new ByteArrayInputStream(arr1));
 		v.add(new ByteArrayInputStream(arr2));
 		v.add(new ByteArrayInputStream(arr3));
 		
-		SequenceInputStream   input  = new SequenceInputStream(v.elements());
+		SequenceInputStream input  = new SequenceInputStream(v.elements());
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		
 		int data = 0;

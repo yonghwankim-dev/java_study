@@ -1,13 +1,15 @@
 package ch15.ex_11_InputStreamReader_InputStreamWriter;
 
+import org.junit.Test;
+
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+
+
 
 public class InputStreamReaderWriterTest {
 	/**
@@ -27,7 +29,7 @@ public class InputStreamReaderWriterTest {
 	 * String getEncoding()
 	 *  : OutputStreamWriter의 인코딩을 알려줌
 	 */
-	@Order(1)
+	
 	@Test
 	void InputStreamReaderTest() {
 		String line = "";

@@ -1,14 +1,13 @@
 package ch10.ex_26_dateTimeFormatter;
 
+import org.junit.Test;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 
 public class DateFormatterTest {
 	
@@ -30,7 +29,6 @@ public class DateFormatterTest {
 	 * DateTimeFormatter에 상수로 정의된 형식
 	 * - https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 	 */
-	@Order(1)
 	@Test
 	void DateTimeFormmaterPredefinedFormattersTest() {
 		printMethodName("DateTimeFormmaterPredefinedFormattersTest");
@@ -64,7 +62,6 @@ public class DateFormatterTest {
 	 * MEDIUM    2015. 11. 28         오후 9:15:13 
 	 * SHORT     15. 11. 28           오후 9:15
 	 */
-	@Order(2)
 	@Test
 	void localeTest() {
 		printMethodName("localeTest");
@@ -84,7 +81,6 @@ public class DateFormatterTest {
 	 * DateTimeFormatter의 패턴에 사용되는 기호 목록
 	 * - https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 	 */
-	@Order(3)
 	@Test
 	void ofPatternMethodTest() {
 		printMethodName("ofPatternMethodTest");
@@ -127,7 +123,6 @@ public class DateFormatterTest {
 	 * 
 	 * LocalDate, LocalTime도 parse() 메서드 사용가능함
 	 */
-	@Order(4)
 	@Test
 	void DateTimeFormatterPasingTest() {
 		printMethodName("DateTimeFormatterPasingTest");

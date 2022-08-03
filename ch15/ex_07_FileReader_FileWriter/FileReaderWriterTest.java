@@ -1,13 +1,8 @@
 package ch15.ex_07_FileReader_FileWriter;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import java.io.*;
 
 public class FileReaderWriterTest {
 	/**
@@ -19,7 +14,7 @@ public class FileReaderWriterTest {
 	 * int read() : 입력소스로부터 하나의 문자를 읽어옵니다. char의 범위인 0~65535 범위의
 	 * 정수를 반환하며, 입력 스트림의 마지막에 도달하면 -1을 반환합니다.
 	 */
-	@Order(1)
+	
 	@Test
 	void fileReaderTest() {
 		String fileName = "./src/ch15/ex_07_FileReader_FileWriter/test.txt";
@@ -51,7 +46,7 @@ public class FileReaderWriterTest {
 	 * FileWriter 인스턴스 메서드
 	 * void write(int b) : 주어진 값을 출력소스에 쓴다
 	 */
-	@Order(2)
+	
 	@Test
 	void fileConversionTest() {
 		try(FileReader fr = new FileReader("./src/ch15/ex_07_FileReader_FileWriter/FileReaderWriterTest.java");

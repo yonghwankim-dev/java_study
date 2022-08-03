@@ -1,17 +1,9 @@
 package ch10.ex_23_time_LocalDateTime;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.OffsetDateTime;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
-import java.time.temporal.ChronoField;
-import java.time.temporal.TemporalAccessor;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import java.time.*;
+import java.time.temporal.ChronoField;
 
 public class LocalDateTimeEx {
 	
@@ -43,7 +35,6 @@ public class LocalDateTimeEx {
 	 * LocalDate 인스턴스 메서드
 	 * LocalDateTime atStartOfDay() : LocalDate를 LocalDateTime으로 변환하고 시/분/초는 0:0:0으로 설정
 	 */
-	@Order(1)
 	@Test
 	void localDateTimeCreateTest() {
 		printMethodName("localDateTimeCreateTest");
@@ -79,7 +70,6 @@ public class LocalDateTimeEx {
 	 * - LocalDate toLocalDate() : LocalDateTime을 LocalDate로 변환
 	 * - LocalTime toLocalTime() : LocalDateTime을 LocalTime으로 변환
 	 */
-	@Order(2)
 	@Test
 	void ConvertLocalDateTimeToLocalDateAndLocalTimeTest() {
 		printMethodName("ConvertLocalDateTimeToLocalDateAndLocalTimeTest");
@@ -106,7 +96,6 @@ public class LocalDateTimeEx {
 	 * ZonedDateTime atStartOfDay(ZoneId zoneId) : LocalDate 인스턴스에 시간대를 추가하여 ZonedDateTime 인스턴스 생성
 	 * 
 	 */
-	@Order(3)
 	@Test
 	void addZoneToLocalDateTimeTest() {
 		printMethodName("addZoneToLocalDateTimeTest");
@@ -132,7 +121,6 @@ public class LocalDateTimeEx {
 	 * ZoneOffset 인스턴스 메서드
 	 * int get(TemporalField field) : UTC로부터 얼마나 떨어져 있는지 특정 시간단위로 반환함
 	 */
-	@Order(4)
 	@Test
 	void ZoneOffsetClassTest() {
 		printMethodName("ZoneOffsetClassTest");
@@ -148,7 +136,6 @@ public class LocalDateTimeEx {
 	 * 1. ZoneDateTime는 ZoneId로 구역을 표현
 	 * 2. OffsetDateTime는 ZoneOffset을 사용하여 시간의 차이로 UTC와의 시간차를 표현
 	 */
-	@Order(5)
 	@Test
 	void OffsetDateTimeClassTest() {
 		printMethodName("OffsetDateTimeClassTest");
@@ -175,7 +162,6 @@ public class LocalDateTimeEx {
 	 * 방법 2. ZonedDateTime.toOffsetDateTime() 메서드
 	 * OffsetDateTime = ZonedDateTime.toOffsetDateTime(); 
 	 */
-	@Order(6)
 	@Test
 	void createWayOffsetDateTimeTest() {
 		printMethodName("createWayOffsetDateTimeTest");
@@ -207,7 +193,6 @@ public class LocalDateTimeEx {
 	 * long toEpochSecond() 			 : ZonedDateTime을 '1970-01-01'부터 경과된 시간을 초로 반환
 	 * Instant toInstant()               : ZonedDateTime을 Instant로 변환
 	 */
-	@Order(7)
 	@Test
 	void ConvertZonedDateTimeTest() {
 		printMethodName("ConvertZonedDateTimeTest");

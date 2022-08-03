@@ -1,16 +1,13 @@
 package ch10.ex_22_time_LocalDate_LocalTime;
 
-import java.time.Instant;
+
+import org.junit.Test;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.chrono.JapaneseDate;
-import java.time.chrono.JapaneseEra;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalAmount;
-
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 
 public class LocalDateLocalTimeTest {
 	
@@ -26,7 +23,6 @@ public class LocalDateLocalTimeTest {
 	 *                        int month, 
 	 *                        int dayOfMonth)  : 특정 년/월/일을 설정한 LocalDate 인스턴스 생성  
 	 */
-	@Order(1)
 	@Test
 	void LocalDateClassTest() {
 		printMethodName("LocalDateClassTest");
@@ -49,7 +45,6 @@ public class LocalDateLocalTimeTest {
 	 * LocalTime 인스턴스 메서드
 	 * LocalTime truncatedTo(TemporalUnit field) : 특정 시간단위보다 작은 단위를 0으로 만든다음 반환
 	 */
-	@Order(2)
 	@Test
 	void LocalTimeClassTest() {
 		printMethodName("LocalTimeClassTest");
@@ -60,7 +55,7 @@ public class LocalDateLocalTimeTest {
 		System.out.println("now         : "   + now);	    // 12:33:35.859165600
 		System.out.println("birthTime   : "   + birthTime); // 23:59:59
 		System.out.println("truncatedTo : "                
-		                 + birthTime.truncatedTo(ChronoUnit.HOURS)); // 23:00 
+		                 + birthTime.truncatedTo(ChronoUnit.HOURS)); // 23:00
 	}
 	
 	/**
@@ -70,7 +65,6 @@ public class LocalDateLocalTimeTest {
 	 * LocalDate plusDays(long daysToAdd)                  : LocalDate 인스턴스에 일자를 더하여 반환
 	 * LocalDate plus(long amountToAdd, TemporalUnit unit) : 특정 날짜단위만큼 더하여 반환
 	 */
-	@Order(3)
 	@Test
 	void LocalDateMethodTest() {
 		printMethodName("LocalDateMethodTest");
@@ -89,7 +83,6 @@ public class LocalDateLocalTimeTest {
 	 * ChronoField 상수목록
 	 * - https://docs.oracle.com/javase/8/docs/api/java/time/temporal/ChronoField.html
 	 */
-	@Order(4)
 	@Test
 	void checkChronoFieldRangeTest() {
 		System.out.println(ChronoField.CLOCK_HOUR_OF_DAY.range()); // 1-24
@@ -113,7 +106,6 @@ public class LocalDateLocalTimeTest {
 	 * - equals()는 모든 필드가 일치해야함
 	 * - isEqual()은 오직 날짜만을 비교함
 	 */
-	@Order(5)
 	@Test
 	void compareLocalDateAndLocalTimeTest() {
 		printMethodName("compareLocalDateAndLocalTimeTest");

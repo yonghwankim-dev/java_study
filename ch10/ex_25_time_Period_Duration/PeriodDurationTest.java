@@ -1,13 +1,13 @@
 package ch10.ex_25_time_Period_Duration;
 
+
+import org.junit.Test;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-
 
 public class PeriodDurationTest {
 	
@@ -24,7 +24,6 @@ public class PeriodDurationTest {
 	 * Period.getMonths() : 월을 추출
 	 * Period.getDays()   : 일자를 추출 
 	 */
-	@Order(1)
 	@Test
 	void PeriodBetweenMethodTest() {
 		printMethodName("PeriodBetweenMethodTest");
@@ -57,7 +56,6 @@ public class PeriodDurationTest {
 	 * Duration 클래스 특징
 	 * 1. Period 클래스와는 달리 시간단위가 초(getSeconds() / getNano())밖에 없음
 	 */
-	@Order(2)
 	@Test
 	void DurationBetweenMethodTest() {
 		printMethodName("DurationBetweenMethodTest");
@@ -91,7 +89,6 @@ public class PeriodDurationTest {
 	 * - 반면 Duration 클래스의 시간 단위는 초/나노초 만을 가지고 있기 때문에 getHours(),
 	 * getMinutes()과 같은 메서드를 호출할 수 없음
 	 */
-	@Order(3)
 	@Test
 	void PeriodAndDurationUnitsCheckTest() {
 		printMethodName("PeriodAndDurationUnitsCheckTest");
@@ -114,7 +111,6 @@ public class PeriodDurationTest {
 	 * 계산 방법 1 : getSeconds(), getNano() 메서드를 통한 시/분/초/나노초 계산
 	 * 계산 방법 2 : Duration 인스턴스를 LocalTime 인스턴스로 변환하여 get 메서드 호출 
 	 */
-	@Order(4)
 	@Test
 	void DurationCalHourMinuteTest() {
 		printMethodName("DurationCalHourMinuteTest");
@@ -147,7 +143,6 @@ public class PeriodDurationTest {
 	 * until()는 인스턴스 메서드임
 	 * - 두번째 인자에 날짜단위(TemporalUnit)를 전달하여 어느 날짜 단위차이인지 계산할 수 있음
 	 */
-	@Order(5)
 	@Test
 	void PeriodUntilMethodTest() {
 		printMethodName("PeriodUntilMethodTest");
@@ -167,7 +162,6 @@ public class PeriodDurationTest {
 	 * - LocalTime.until(Temporal endExclusive, TemporalUnit unit)
 	 * LocalTime 인스턴스간의 시간 차이를 계산합니다.
 	 */
-	@Order(6)
 	@Test
 	void DurationUntilMethodTest() {
 		printMethodName("DurationUntilMethodTest");
@@ -189,7 +183,6 @@ public class PeriodDurationTest {
 	 * Period.ofWeeks(int weeks)                  : 특정 n주를 설정하여 Period 인스턴스 생성, 1주=7일
 	 * Period.ofDays(int days)                    : 특정 일을 설정하여 Period 인스턴스 생성
 	 */
-	@Order(7)
 	@Test
 	void PeriodOfMethodTest() {
 		printMethodName("PeriodOfMethodTest");
@@ -215,7 +208,6 @@ public class PeriodDurationTest {
 	 * Duration.ofSeconds(long seconds)            : seconds초만큼 차이를 가지는 Duration 인스턴스 생성
 	 * Duration.ofNanos(long nanos)                : nanos초만큼 차이를 가지는 Duration 인스턴스 생성
 	 */
-	@Order(8)
 	@Test
 	void DurationOfMethodTest() {
 		printMethodName("DurationOfMethodTest");
@@ -244,7 +236,6 @@ public class PeriodDurationTest {
 	 * Period withMonths(int months) : Period 인스턴스의 월 필드만을 변경
 	 * Period withDays(int days)     : Period 인스턴스의 일자 필드만을 변경 
 	 */
-	@Order(9)
 	@Test
 	void PeriodWithMethodTest() {
 		printMethodName("PeriodWithMethodTest");
@@ -265,7 +256,6 @@ public class PeriodDurationTest {
 	 * Duration withSeconds(int seconds) : Duration 인스턴스의 초 필드만을 변경
 	 * Duration withNanos(int nanos)     : Duration 인스턴스의 나노초 필드만을 변경
 	 */
-	@Order(10)
 	@Test
 	void DurationWithMethodTest() {
 		printMethodName("DurationWithMethodTest");
@@ -288,7 +278,6 @@ public class PeriodDurationTest {
 	 * Period minusDays(long daysToSubtract)         : 특정 일자만큼 차감
 	 * Period multipliedBy(int scaler)               : scaler 수만큼 날짜를 곱함    
 	 */
-	@Order(11)
 	@Test
 	void PeriodArithmeticOperationMethodTest() {
 		printMethodName("PeriodArithmeticOperationMethodTest");
@@ -311,7 +300,6 @@ public class PeriodDurationTest {
 	 * Duration multipliedBy(int scaler)                  : scaler만큼 곱함
 	 * Duration divideBy(long divisor)                    : divisor만큼 나눔
 	 */
-	@Order(12)
 	@Test
 	void DurationArithmeticOperationMethodTest() {
 		printMethodName("PeriodAndDurationIsZeroAndIsNegativeMethodTest");
@@ -335,7 +323,6 @@ public class PeriodDurationTest {
 	 * boolean isZero() : 두 날짜의 차이가 0인지 검사
 	 * boolean isNegative() : 음수인지 검사 
 	 */
-	@Order(13)
 	@Test
 	void PeriodAndDurationIsZeroAndIsNegativeMethodTest() {
 		printMethodName("PeriodAndDurationIsZeroAndIsNegativeMethodTest");
@@ -355,7 +342,6 @@ public class PeriodDurationTest {
 	 * title : Period.normalized() 메서드
 	 * Period normalized() : 월의 값이 12를 넘기지 않고 년도로 넘겨주는 기능
 	 */
-	@Order(14)
 	@Test
 	void PeriodNormalizedMethodTest() {
 		printMethodName("PeriodNormalizedMethodTest");
@@ -379,7 +365,6 @@ public class PeriodDurationTest {
 	 * long toMillis()      : 밀리초 단위로 변환해서 반환
 	 * long toNanos()       : 나노초 단위로 변환해서 반환
 	 */
-	@Order(15)
 	@Test
 	void PeriodAndDurationToMethodTest() {
 		printMethodName("PeriodAndDurationToMethodTest");
@@ -409,7 +394,6 @@ public class PeriodDurationTest {
 	 * LocalDate 인스터스 메서드
 	 * long toEpochDay() : '1970-01-01'부터 LocalDate 인스턴스의 날짜까지를 일자를 세어서 반환
 	 */
-	@Order(16)
 	@Test
 	void LocalDateToEpochDayMethodTest() {
 		printMethodName("LocalDateToEpochDayMethodTest");

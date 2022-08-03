@@ -1,17 +1,15 @@
 package ch10.ex_24_time_TemporalAdjusters;
 
+import org.junit.Test;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-
-class DayAfterTomorrow implements TemporalAdjuster{
+class DayAfterTomorrow implements TemporalAdjuster {
 
 	@Override
 	public Temporal adjustInto(Temporal temporal) {
@@ -43,7 +41,6 @@ public class TemporalAdjustersTest {
 	 * - TemporalAdjuster nextOrSame(DayOfWeek)            : 다음의 요일 (당일 포함)
 	 * - TemporalAdjuster dayOfWeekInMonth(int, DayOfWeek) : 이번달의 n번째 요일
 	 */
-	@Order(1)
 	@Test
 	void temporalAdjustersClassTest() {
 		LocalDate today = LocalDate.of(2022, 06, 20);

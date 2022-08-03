@@ -1,12 +1,12 @@
 package toy.toy_06_calendar;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 class CalendarControllerTest {
 	private CalendarController c;
 	
-	@BeforeEach
+	@Before
 	void setUp() {
 		this.c = new CalendarController();
 	}

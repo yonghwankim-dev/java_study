@@ -1,12 +1,14 @@
 package ch15.ex_08_PipedReader_PipedWriter;
 
+import org.junit.Test;
+
 import java.io.IOException;
 import java.io.PipedReader;
 import java.io.PipedWriter;
 import java.io.StringWriter;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+
+
 
 class InputThread extends Thread{
 	PipedReader input = new PipedReader();
@@ -75,7 +77,7 @@ public class PipedReaderWriterTest {
 	 * 입력과 출력스트림을 하나의 스트림으로 연결해서 데이터를 주고받음
 	 * 입출력을 마친 후에는 어느 한쪽 스트림만 닫아도 나머지 스트림은 자동으로 닫힘
 	 */
-	@Order(1)
+	
 	@Test
 	void PipedReaderWriterTest() {
 		InputThread inThread   = new InputThread("InputThread");

@@ -1,11 +1,10 @@
 package ch15.ex_03_BufferedInputStream_BufferedOutputStream;
 
+import org.junit.Test;
+
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 
 public class BufferedInputOutputStreamTest {
 	void printMethodName(String methodName) {
@@ -29,7 +28,7 @@ public class BufferedInputOutputStreamTest {
 	 * 상태에서 기반 스트림인 FileOutputStream이 close되고 종료되었기 때문에
 	 * 6789는 출력되지 않고 종료된것입니다.
 	 */
-	@Order(1)
+	
 	@Test
 	void bufferedOutputStreamWriteTest() {
 		printMethodName("bufferedOutputStreamWriteTest");

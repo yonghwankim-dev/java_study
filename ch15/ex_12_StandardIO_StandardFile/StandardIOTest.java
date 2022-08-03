@@ -5,9 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class StandardIOTest {
 	/**
@@ -21,7 +19,7 @@ public class StandardIOTest {
 	 *                        Enter 키 누를시 '\r'(캐리지리턴), '\n'이 같이 입력됨
 	 *                        이를 보완하기 위해서 BufferedReader를 이용함
 	 */
-	@Order(1)
+	
 	@Test
 	void systemInTest() {
 		try {
@@ -41,7 +39,7 @@ public class StandardIOTest {
 	 * 의 기본 입출력대상은 콘솔(console)입니다.
 	 * 
 	 */
-	@Order(2)
+	
 	@Test
 	void outputTargetIsConsoleTest() {
 		System.out.println("out : Hello World!");
@@ -55,7 +53,7 @@ public class StandardIOTest {
 	 * static void setErr(PrintStream err) : System.err의 출력을 지정된 PrintStream으로 변경
 	 * static void setIn(InputStream in)   : System.in의 입력을 지정한 InputStream으로 변경
 	 */
-	@Order(3)
+	
 	@Test
 	void setOutMethodTest() {
 		String filePath = "./src/ch15/ex_12_StandardIO_StandardFile/test.txt";

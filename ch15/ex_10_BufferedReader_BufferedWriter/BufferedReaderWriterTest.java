@@ -1,12 +1,14 @@
 package ch15.ex_10_BufferedReader_BufferedWriter;
 
+import org.junit.Test;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+
+
 
 public class BufferedReaderWriterTest {
 	/**
@@ -14,7 +16,7 @@ public class BufferedReaderWriterTest {
 	 * BufferedReader / BufferedWriter는 버퍼를 이용해서 입출력의 효율을 높일수 있도록
 	 * 해주는 역할을 수행함
 	 */
-	@Order(1)
+	
 	@Test
 	void bufferedReaderTest() {
 		try(FileReader fr = new FileReader("./src/ch15/ex_10_BufferedReader_BufferedWriter/BufferedReaderWriterTest.java");

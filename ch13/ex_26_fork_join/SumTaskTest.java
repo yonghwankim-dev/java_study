@@ -1,17 +1,11 @@
 package ch13.ex_26_fork_join;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.concurrent.ForkJoinPool;
-
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 
 public class SumTaskTest {
 	static final ForkJoinPool pool = new ForkJoinPool();     // 쓰레드 풒생성
-	@Order(1)
 	@Test
 	void recursiveTaskTest() {
 		long from = 1L, to = 100_000_000L;

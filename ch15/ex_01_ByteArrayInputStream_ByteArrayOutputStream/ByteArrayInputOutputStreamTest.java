@@ -1,12 +1,11 @@
 package ch15.ex_01_ByteArrayInputStream_ByteArrayOutputStream;
 
+import org.junit.Test;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
-
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 
 public class ByteArrayInputOutputStreamTest {
 	
@@ -23,7 +22,7 @@ public class ByteArrayInputOutputStreamTest {
 	 * void write(int b)    : 주어진 값을 출력소스에 씀
 	 * byte[] toByteArray() : 스트림의 내용을 byte 배열로 반환  
 	 */
-	@Order(1)
+	
 	@Test
 	void readWriteMethodTest() {
 		printMethodName("readWriteMethodTest");
@@ -31,7 +30,7 @@ public class ByteArrayInputOutputStreamTest {
 		byte[] inSrc = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 		byte[] outSrc = null;
 		
-		ByteArrayInputStream  input  = new ByteArrayInputStream(inSrc);
+		ByteArrayInputStream input  = new ByteArrayInputStream(inSrc);
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		
 		int data = 0;
@@ -60,7 +59,7 @@ public class ByteArrayInputOutputStreamTest {
 	 * void write(byte[] b, int off, int len)
 	 *  : 주어진 배열 b에 저장된 내용 중에서 off번째부터 len개 만큼만을 읽어서 출력 소스에 쓴다.
 	 */
-	@Order(2)
+	
 	@Test
 	void readWriteByusingArrayTest() {
 		printMethodName("readWriteByusingArrayTest");
@@ -93,7 +92,7 @@ public class ByteArrayInputOutputStreamTest {
 	 * temp 내용 변화
 	 * [4, 5, 6, 7] -> [8, 9, 6, 7]
 	 */
-	@Order(3)
+	
 	@Test
 	void availableMethodTest() {
 		printMethodName("availableMethodTest");
@@ -125,7 +124,7 @@ public class ByteArrayInputOutputStreamTest {
 	 * title : available 메서드 개선
 	 * ByteArrayOutputStream.write() 메서드 사용시 읽어온 데이터 개수만큼 write하도록 개선 
 	 */
-	@Order(3)
+	
 	@Test
 	void availableMethodImprovingTest() {
 		printMethodName("availableMethodImprovingTest");

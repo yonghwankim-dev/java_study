@@ -1,11 +1,10 @@
 package ch15.ex_09_StringReader_StringWriter;
 
+import org.junit.Test;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 
 public class StringReaderWriterTest {
 	/**
@@ -14,7 +13,7 @@ public class StringReaderWriterTest {
 	 * StringBuffer getBuffer() : StringWriter에 출력한 데이터가 저장된 StringBuffer를 반환
 	 * String       toString()  : StringWriter에 출력된(StringBuffer에 저장된) 문자열을 반환
 	 */
-	@Order(1)
+	
 	@Test
 	void StringReaderWriterTest() {
 		String inputData = "ABCD";

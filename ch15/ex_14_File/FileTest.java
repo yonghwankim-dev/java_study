@@ -1,5 +1,7 @@
 package ch15.ex_14_File;
 
+import org.junit.Test;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -10,8 +12,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+
+
 
 
 public class FileTest {
@@ -24,7 +26,7 @@ public class FileTest {
 	 * https://docs.oracle.com/javase/8/docs/api/java/io/File.html
 	 * @throws IOException
 	 */
-	@Order(1)
+	
 	@Test
 	void fileClassTest() throws IOException {
 		printMethodName("fileClassTest");
@@ -54,7 +56,7 @@ public class FileTest {
 	/**
 	 * title : 지정한 디렉터리에 포함된 파일과 디렉토리의 목록을 보여주는 예제
 	 */
-	@Order(2)
+	
 	@Test
 	void showFilesAndDirectoryTest() {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -90,7 +92,7 @@ public class FileTest {
 	/**
 	 * title : 서브 디렉토리와 그에 포함된 파일과 디렉터리의 목록까지 보여주는 예제
 	 */
-	@Order(3)
+	
 	@Test
 	void showFilesAndSubDirectoryTest() {
 		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
@@ -148,7 +150,7 @@ public class FileTest {
 	/**
 	 * title : 현재 딛렉토리에 속한 파일과 디렉토리의 이름과 크기 등 상세 정보를 보여주는 예제
 	 */
-	@Order(4)
+	
 	@Test
 	void showDetailInfoTest(){
 		printMethodName("showDetailInfoTest");

@@ -1,9 +1,8 @@
 package ch15.ex_06_PrintStream;
 
-import java.util.Date;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import java.util.Date;
 
 public class PrintStreamTest {
 	void printMethodName(String methodName) {
@@ -55,7 +54,7 @@ public class PrintStreamTest {
 	 * 
 	 * '숫자$'를 옵션앞에 붙여줌으로써 출력된 매개변수를 지정해줄수 있음
 	 */
-	@Order(1)
+	
 	@Test
 	void printStreamTest() {
 		int i   = 65;

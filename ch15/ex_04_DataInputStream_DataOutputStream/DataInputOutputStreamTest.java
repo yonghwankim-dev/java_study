@@ -1,17 +1,9 @@
 package ch15.ex_04_DataInputStream_DataOutputStream;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Arrays;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import java.io.*;
+import java.util.Arrays;
 
 public class DataInputOutputStreamTest {
 	void printMethodName(String methodName) {
@@ -25,7 +17,7 @@ public class DataInputOutputStreamTest {
 	 * void writeFloat(float v)      : 파일에 4byte 크기로 값을 출력
 	 * void writeBoolean(boolean v)  : 파일에 2byte 크기로 값을 출력
 	 */
-	@Order(1)
+	
 	@Test
 	void writeIntFloatBooleanMethodTest() {
 		printMethodName("writeIntFloatBooleanMethodTest");
@@ -71,7 +63,7 @@ public class DataInputOutputStreamTest {
 	 * title : 파일을 ByteArrayOutputStream을 이용하여 16진수 코드를 읽기
 	 * 특정 데이터 타입으로 작성한 내용을 byte배열을 이용하여 16진수로 출력
 	 */
-	@Order(2)
+	
 	@Test
 	void readHexCodeTest() {
 		printMethodName("readHexCodeTest");
@@ -114,7 +106,7 @@ public class DataInputOutputStreamTest {
 	 * title : DataOutputStream.writeInt 메서드를 이용하여 파일에 정수 출력
 	 * writeInt() 메서드를 통하여 4byte 크기의 16진수로 출력
 	 */
-	@Order(3)
+	
 	@Test
 	void writeIntTest() {
 		int[] scores = {100, 90, 95, 85, 50};
@@ -137,7 +129,7 @@ public class DataInputOutputStreamTest {
 	 * title : DataInputStream.readInt() 메서드를 이용한 정수 읽기
 	 * DataIntputStream은 더이상 읽을 수 있는 데이터가 없다면 EOFExeption 예외를 발생시킴
 	 */
-	@Order(4)
+	
 	@Test
 	void readIntTest() {
 		printMethodName("readIntTest");

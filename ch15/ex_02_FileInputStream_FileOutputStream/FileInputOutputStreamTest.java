@@ -1,12 +1,11 @@
 package ch15.ex_02_FileInputStream_FileOutputStream;
 
+import org.junit.Test;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
 
 public class FileInputOutputStreamTest {
 	void printMethodName(String methodName) {
@@ -23,7 +22,7 @@ public class FileInputOutputStreamTest {
 	 * 
 	 * @throws IOException
 	 */
-	@Order(1)
+	
 	@Test
 	void fileViewerTest() throws IOException {
 		printMethodName("fileViewerTest");
@@ -42,7 +41,7 @@ public class FileInputOutputStreamTest {
 	 * FileOutputStream 인스턴스 메서드
 	 * void write(int b) : b값을 파일에 작성함
 	 */
-	@Order(2)
+	
 	@Test
 	void fileCopyTest(){
 		printMethodName("fileCopyTest");

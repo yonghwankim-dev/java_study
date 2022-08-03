@@ -1,9 +1,11 @@
 package ch10.ex_22_time_LocalDate_LocalTime;
 
-import java.time.Instant;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runner.OrderWith;
+import org.junit.runners.MethodSorters;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import java.time.Instant;
 
 public class InstantTest {
 
@@ -22,7 +24,6 @@ public class InstantTest {
 	 * Instant Instant.ofEpochSecond(long epochSecond,    : 에포크 타임초, 에포크 타임 나노초를 입력받아 인스턴스 생성
 	 *                               long nanoAdjustment)
 	 */
-	@Order(1)
 	@Test
 	void InstantClassTest() {
 		printMethodName("InstantClassTest");

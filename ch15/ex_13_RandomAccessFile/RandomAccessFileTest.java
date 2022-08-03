@@ -1,12 +1,14 @@
 package ch15.ex_13_RandomAccessFile;
 
+import org.junit.Test;
+
 import java.io.EOFException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+
+
 
 public class RandomAccessFileTest {
 	void printMethodName(String methodName) {
@@ -23,7 +25,7 @@ public class RandomAccessFileTest {
 	 * int = 4byte
 	 * long = 4byte
 	 */
-	@Order(1)
+	
 	@Test
 	void filePointMethodTest() {
 		printMethodName("filePointMethodTest");
@@ -48,7 +50,7 @@ public class RandomAccessFileTest {
 	 * void seek(long pos) : 파일 포인터의 위치를 변경한다. 위치는 파일의 첫 부분부터 pos 크기만큼
 	 * 떨어진곳입니다. (단위 byte)
 	 */
-	@Order(2)
+	
 	@Test
 	void writeInt_readIntMethodTest() {
 		printMethodName("writeInt_readIntMethodTest");
@@ -84,7 +86,7 @@ public class RandomAccessFileTest {
 	/**
 	 * title : RandomAccessFile.seek() 메서드를 사용하여 국어점수의 합계 출력
 	 */
-	@Order(3)
+	
 	@Test
 	void seekMethodTest() {
 		printMethodName("seekMethodTest");
