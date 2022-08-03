@@ -31,6 +31,7 @@
 
 ### Chapter 12. 지네릭스, 열거형, 애너테이션(Generics, Enums, Annotation)
 1. [\[Java\]\[Generics\] 지네릭스(Generics)](https://yonghwankim-dev.tistory.com/491)
+2. [\[Java\]\[enums\] 열거형(enums)](https://yonghwankim-dev.tistory.com/502)
 
 
 ### Chapter 13. 쓰레드(Thread)
