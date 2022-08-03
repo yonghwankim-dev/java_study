@@ -18,7 +18,6 @@
 8. [\[Java\] 7. 객체지향 프로그래밍 2 #8 내부 클래스(Inner Class)](https://yonghwankim-dev.tistory.com/384)
 
 ### Chapter 8. 예외 처리(Exception Handling)
-
 1. [\[Java\] 8. 예외처리(exception handling)](https://yonghwankim-dev.tistory.com/427)
 
 ### Chapter 10. 날짜와 시간 & 형식화 date, time and formatting
@@ -29,6 +28,10 @@
 5. [\[Java\]\[time\] LocalDateTime & ZonedDateTime 클래스, TemporalAdjusters 클래스](https://yonghwankim-dev.tistory.com/448)
 6. [\[Java\]\[time\] Period와 Duration 클래스](https://yonghwankim-dev.tistory.com/449)
 7. [\[Java\]\[time\] DateTimeFormatter 클래스의 파싱과 포맷](https://yonghwankim-dev.tistory.com/450)
+
+### Chapter 12. 지네릭스, 열거형, 애너테이션(Generics, Enums, Annotation)
+1. [\[Java\]\[Generics\] 지네릭스(Generics)](https://yonghwankim-dev.tistory.com/491)
+
 
 ### Chapter 13. 쓰레드(Thread)
 1. [\[Java\]\[Thread\] 프로세스와 쓰레드](https://yonghwankim-dev.tistory.com/458)
@@ -43,18 +46,6 @@
 10. [\[Java\]\[Thread\] 쓰레드의 동기화 #2 Lock과 Condition을 이용한 동기화](https://yonghwankim-dev.tistory.com/472)
 11. [\[Java\]\[Thread\] 쓰레드의 동기화 #3 volatile](https://yonghwankim-dev.tistory.com/473)
 12. [\[Java\]\[Thread\] 쓰레드의 동기화 #4 fork & join 프레임워크](https://yonghwankim-dev.tistory.com/474)
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Chapter 15. 입출력(I/O)
 1. [\[Java\]\[I/O\] 자바에서의 입출력](https://yonghwankim-dev.tistory.com/451)
