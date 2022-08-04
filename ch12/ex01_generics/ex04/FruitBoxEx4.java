@@ -1,9 +1,8 @@
-package ch12._01_generics.ex04;
+package ch12.ex01_generics.ex04;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 /**
  * title : 와일드카드를 이용한 하한 설정

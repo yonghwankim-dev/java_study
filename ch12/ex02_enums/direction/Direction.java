@@ -1,4 +1,4 @@
-package ch12._02_enums.direction;
+package ch12.ex02_enums.direction;
 
 enum Direction{
     EAST(1, ">"), SOUTH(2, "V"), WEST(3, "<"), NORTH(4, "^");

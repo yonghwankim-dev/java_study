@@ -1,4 +1,4 @@
-package ch12._01_generics.ex02;
+package ch12.ex01_generics.ex02;
 
 import java.util.ArrayList;
 

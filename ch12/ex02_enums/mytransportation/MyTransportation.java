@@ -1,4 +1,4 @@
-package ch12._02_enums.mytransportation;
+package ch12.ex02_enums.mytransportation;
 
 
 abstract class MyTransportation extends MyEnum {

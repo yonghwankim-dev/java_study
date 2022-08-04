@@ -1,4 +1,4 @@
-package ch12._02_enums.mytransportation;
+package ch12.ex02_enums.mytransportation;
 
 abstract class MyEnum<T extends MyEnum<T>> implements Comparable<T> {
     static int id = 0; // 객체에 붙일 일련번호 (0부터 시작)

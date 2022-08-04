@@ -1,4 +1,4 @@
-package ch12._02_enums.transportation;
+package ch12.ex02_enums.transportation;
 
 enum Transportation {
     BUS(100) {

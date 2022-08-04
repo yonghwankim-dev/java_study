@@ -1,7 +1,6 @@
-package ch12._02_enums.direction;
+package ch12.ex02_enums.direction;
 
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import static org.assertj.core.api.Assertions.*;
 
