@@ -33,7 +33,6 @@
 1. [\[Java\]\[Generics\] 지네릭스(Generics)](https://yonghwankim-dev.tistory.com/491)
 2. [\[Java\]\[enums\] 열거형(enums)](https://yonghwankim-dev.tistory.com/502)
 
-
 ### Chapter 13. 쓰레드(Thread)
 1. [\[Java\]\[Thread\] 프로세스와 쓰레드](https://yonghwankim-dev.tistory.com/458)
 2. [\[Java\]\[Thread\] 쓰레드의 구현과 실행](https://yonghwankim-dev.tistory.com/459)
@@ -47,6 +46,10 @@
 10. [\[Java\]\[Thread\] 쓰레드의 동기화 #2 Lock과 Condition을 이용한 동기화](https://yonghwankim-dev.tistory.com/472)
 11. [\[Java\]\[Thread\] 쓰레드의 동기화 #3 volatile](https://yonghwankim-dev.tistory.com/473)
 12. [\[Java\]\[Thread\] 쓰레드의 동기화 #4 fork & join 프레임워크](https://yonghwankim-dev.tistory.com/474)
+
+### Chapter 14. 람다와 스트림
+1. [\[java\]\[lambda\] 람다식(Lambda Expression)](https://yonghwankim-dev.tistory.com/511)
+
 
 ### Chapter 15. 입출력(I/O)
 1. [\[Java\]\[I/O\] 자바에서의 입출력](https://yonghwankim-dev.tistory.com/451)
