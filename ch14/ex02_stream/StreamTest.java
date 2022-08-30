@@ -1,21 +1,13 @@
 package ch14.ex02_stream;
 
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-import java.io.BufferedReader;
+import javax.swing.text.html.Option;
 import java.io.File;
-import java.io.FileReader;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.function.Consumer;
-import java.util.stream.BaseStream;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -25,7 +17,7 @@ import static org.assertj.core.api.Assertions.*;
 public class StreamTest {
 
     @Test
-    public void 스트림_stream_테스트() throws Exception {
+    public void Stream_createStream()  {
         //given
         String[] strArr = {"aaa", "bbb", "ccc"};
         List<String> strList = Arrays.asList(strArr);
@@ -44,11 +36,10 @@ public class StreamTest {
         //then
         assertThat(actual1).isEqualTo("aaa bbb ccc");
         assertThat(actual2).isEqualTo("aaa bbb ccc");
-
     }
 
     @Test
-    public void 스트림생성컬렉션_stream_테스트() throws Exception {
+    public void Stream_Collection_create()  {
         //given
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
         StringBuilder sb = new StringBuilder();
@@ -62,7 +53,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림생성_배열_테스트() throws Exception {
+    public void Stream_arrayStream()  {
         Stream<String> strStream1 = Stream.of("a", "b", "c");          // 가변인자
         Stream<String> strStream2 = Stream.of(new String[]{"a", "b", "c"});     // 제너릭타입 배열
         Stream<String> strStream3 = Arrays.stream(new String[]{"a", "b", "c"}); // 제너릭타입 배열
@@ -76,7 +67,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 특정범위의정수_range_rangeClosed_테스트() throws Exception {
+    public void IntStream_range_rangeClosed()  {
         //given
         IntStream intStream1 = IntStream.range(1, 5);
         IntStream intStream2 = IntStream.rangeClosed(1, 5);
@@ -92,7 +83,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 임의의수_ints_테스트() throws Exception {
+    public void Random_ints()  {
         //given
         Random r = new Random();
         IntStream intStream1 = r.ints().limit(5);
@@ -109,7 +100,7 @@ public class StreamTest {
     }
 
     @Test
-    public void iterate_generate_테스트() throws Exception {
+    public void Stream_iterate_generate()  {
         Stream<Integer> evenStream = Stream.iterate(0, n -> n + 2);
         Stream<Double> randomStream = Stream.generate(Math::random);
         Stream<Integer> oneStream = Stream.generate(() -> 1);
@@ -122,7 +113,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 빈스트림_empty_테스트() throws Exception {
+    public void 빈스트림_empty_테스트()  {
         //given
         Stream emptyStream = Stream.empty();
 
@@ -133,7 +124,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림의연결_concat_테스트() throws Exception {
+    public void 스트림의연결_concat_테스트()  {
         //given
         String[] str1 = {"123", "456", "789"};
         String[] str2 = {"ABC", "DEF", "GHI"};
@@ -151,7 +142,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림자르기_skip_limit_테스트() throws Exception {
+    public void 스트림자르기_skip_limit_테스트()  {
         //given
         IntStream intStream = IntStream.rangeClosed(1, 10); // 1~10
         //when
@@ -161,7 +152,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림요소걸러내기_distinct_테스트() throws Exception{
+    public void 스트림요소걸러내기_distinct_테스트() {
         //given
         IntStream intStream = IntStream.of(1,2,2,3,3,3,4,5,5,6);
         //when
@@ -171,7 +162,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림요소걸러내기_filter_테스트() throws Exception{
+    public void 스트림요소걸러내기_filter_테스트() {
         //given
         IntStream intStream = IntStream.rangeClosed(1,10);
         IntStream intStream2 = IntStream.rangeClosed(1,10);
@@ -187,7 +178,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 정렬_sorted_테스트() throws Exception{
+    public void 정렬_sorted_테스트() {
         //given
         Stream<String> strStream = Stream.of("dd", "aaa", "CC", "cc", "b");
         StringBuilder sb = new StringBuilder();
@@ -200,7 +191,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 정렬_sorted_Comparator_테스트() throws Exception{
+    public void 정렬_sorted_Comparator_테스트() {
         //given
         Stream<String>[] strStreams = new Stream[11];
         String[] actualArray = new String[11];
@@ -250,7 +241,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 정렬_thenComparing_테스트() throws Exception{
+    public void 정렬_thenComparing_테스트() {
         //given
         Stream<Student> studentStream = Stream.of(new Student("김용환", 1, 100),
                                                   new Student("이경수",1, 150),
@@ -270,7 +261,7 @@ public class StreamTest {
     }
 
     @Test
-    public void sorted_객체정렬_thenComparing_테스트() throws Exception{
+    public void sorted_객체정렬_thenComparing_테스트() {
         //given
         Student[] students = {
                 new Student("이자바",3,300),
@@ -294,7 +285,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 변환_map_테스트() throws Exception{
+    public void 변환_map_테스트() {
         //given
         File[] files = {new File("Ex1.java"),
                         new File("Ex1"),
@@ -310,7 +301,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 변환_map_확장자만추출_테스트() throws Exception{
+    public void 변환_map_확장자만추출_테스트() {
         //given
         File[] files = {new File("Ex1.java"),
                 new File("Ex1"),
@@ -331,7 +322,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 조회_peek_테스트() throws Exception{
+    public void 조회_peek_테스트() {
         //given
         File[] files = {new File("Ex1.java"),
                 new File("Ex1"),
@@ -356,8 +347,23 @@ public class StreamTest {
     }
 
     @Test
-    public void 변환_mapToInt_테스트() throws Exception{
+    public void 변환_mapToInt_테스트() {
         //given
+        Student[] students = getStudents();
+        Stream<Student> studentStream = Stream.of(students);
+
+        //when
+        Stream<Integer> studentScoreStream1 = studentStream.map(Student::getTotalScore);
+        studentStream = Stream.of(students);
+        IntStream studentScoreStream2 = studentStream.mapToInt(Student::getTotalScore);
+        int actual1 = studentScoreStream1.reduce(0, Integer::sum);
+        int actual2 = studentScoreStream2.sum();
+        //then
+        assertThat(actual1).isEqualTo(1420);
+        assertThat(actual2).isEqualTo(1420);
+    }
+
+    private Student[] getStudents() {
         Student[] students = {
                 new Student("이자바",3,300),
                 new Student("김자바",1,200),
@@ -367,14 +373,143 @@ public class StreamTest {
                 new Student("나자바",3,290),
                 new Student("감자바",3,180)
         };
-        Stream<Student> studentStream = Stream.of(students);
+        return students;
+    }
 
+    @Test
+    public void IntStream_sum() {
+        //given
+        Student[] students = getStudents();
+        Stream<Student> studentStream = Stream.of(students);
         //when
-//        Stream<Integer> studentScoreStream = studentStream.map(Student::getTotalScore);
-        IntStream studentScoreStream = studentStream.mapToInt(Student::getTotalScore);
-        int actual = studentScoreStream.sum();
+        IntStream scoreStream = studentStream.mapToInt(Student::getTotalScore);
+        int actual = scoreStream.sum();
         //then
         assertThat(actual).isEqualTo(1420);
     }
+
+    @Test
+    public void Stream_mapToInt_average() {
+        //given
+        Student[] students = getStudents();
+        Stream<Student> studentStream = Stream.of(students);
+        //when
+        IntStream scoreStream = studentStream.mapToInt(Student::getTotalScore);
+        OptionalDouble optionalDouble = scoreStream.average();
+        long actual = Math.round(optionalDouble.orElse(0));
+        //then
+        assertThat(actual).isEqualTo(203L);
+    }
+
+    @Test
+    public void IntStream_summaryStatistics() {
+        //given
+        Student[] students = getStudents();
+        Stream<Student> studentStream = Stream.of(students);
+        //when
+        IntStream scoreStream = studentStream.mapToInt(Student::getTotalScore);
+        IntSummaryStatistics stat = scoreStream.summaryStatistics();
+        long   totalCount = stat.getCount();
+        long   totalScore = stat.getSum();
+        double avgScore   = Math.round(stat.getAverage());
+        int    minScore   = stat.getMin();
+        int    maxScore   = stat.getMax();
+        //then
+        assertThat(totalCount).isEqualTo(7);
+        assertThat(totalScore).isEqualTo(1420);
+        assertThat(avgScore).isEqualTo(203.0);
+        assertThat(minScore).isEqualTo(100);
+        assertThat(maxScore).isEqualTo(300);
+    }
+    
+    @Test
+    public void IntStream_mapToObj() {
+        //given
+        IntStream intStream = new Random().ints(1, 16); // 1~45사이의 정수 (46은 포함안됨)
+
+        //when
+        Stream<String> lottoStream = intStream.distinct()
+                                              .limit(6)
+                                              .sorted()
+                                              .mapToObj(i->i+","); // 정수를 문자열로 변환
+        //then
+        lottoStream.forEach(System.out::print);
+    }
+
+    @Test
+    public void flatMap1() {
+        //given
+        Stream<String[]> strArrStrm = Stream.of(
+          new String[]{"abc","def","ghi"},
+          new String[]{"ABC","GHI","JKLMN"}
+        );
+        //when
+//        Stream<Stream<String>> strStrStream = strArrStrm.map(Arrays::stream); // (x)
+        Stream<String> strStream = strArrStrm.flatMap(Arrays::stream);
+        String[] actual = strStream.collect(Collectors.joining(" ")).split(" ");
+        //then
+        assertThat(actual).isEqualTo(new String[]{"abc","def","ghi","ABC","GHI","JKLMN"});
+    }
+
+    @Test
+    public void flatMap2() {
+        //given
+        String[] lineArr = {
+                "Belive or not It is true",
+                "Do or do not There is no try"
+        };
+        Stream<String> lineStream = Arrays.stream(lineArr);
+        //when
+        Stream<Stream<String>> strArrayStream = lineStream.map(line -> Stream.of(line.split(" "))); // 적절하지 않은 매핑
+
+        lineStream = Arrays.stream(lineArr);
+        Stream<String> strStream = lineStream.flatMap(line->Stream.of(line.split(" ")));
+        String[] actual = strStream.collect(Collectors.joining(" ")).split(" ");
+        //then
+        assertThat(actual).isEqualTo(new String[]{"Belive", "or", "not", "It", "is", "true", "Do", "or", "do", "not", "There", "is", "no", "try"});
+    }
+
+    @Test
+    public void flatMap3() {
+        // strStream의 단어들을 모두 소문자로 변환하고, 중복된 단어들을 제거한 다음에 정렬해서 배열에 저장
+
+        //given
+        String[] lineArr = {
+                "Belive or not It is true",
+                "Do or do not There is no try"
+        };
+        Stream<String> lineStream = Arrays.stream(lineArr);
+        Stream<String> strStream = lineStream.flatMap(line->Stream.of(line.split(" ")));
+        //when
+        String[] actual = strStream.map(String::toLowerCase)
+                                   .distinct()
+                                   .sorted()
+                                   .collect(Collectors.joining(" "))
+                                   .split(" ");
+
+        //then
+        assertThat(actual).isEqualTo(new String[]{"belive", "do", "is", "it", "no", "not", "or", "there", "true", "try"});
+    }
+
+    @Test
+    public void flatMap4() {
+        // 스트림의 스트림을 하나의 스트림으로 합칠때 flatMap을 사용함
+
+        //given
+        Stream<String> strStrea1 = Stream.of("abc","def","jklmn");
+        Stream<String> strStrea2 = Stream.of("ABC","GHI","JKLMN");
+        Stream<Stream<String>> strmStrm = Stream.of(strStrea1, strStrea2);
+
+        //when
+        String[] actual = strmStrm.map(s->s.toArray(String[]::new)) // Stream<Stream<String>> -> Stream<String[]>
+                                  .flatMap(Arrays::stream)// Stream<String[]> -> Stream<String>
+                                  .collect(Collectors.joining(" "))
+                                  .split(" ");
+
+        //then
+        assertThat(actual).isEqualTo(new String[]{"abc","def","jklmn","ABC","GHI","JKLMN"});
+    }
+
+
 
 }
