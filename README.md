@@ -49,6 +49,7 @@
 
 ### Chapter 14. 람다와 스트림
 1. [\[java\]\[lambda\] 람다식(Lambda Expression)](https://yonghwankim-dev.tistory.com/511)
+2. [\[java\]\[lamdba\] 스트림(Stream)](https://github.com/yonghwankim-dev/java_study/tree/main/ch14/ex02_stream)
 
 
 ### Chapter 15. 입출력(I/O)
