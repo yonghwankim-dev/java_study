@@ -1,6 +1,5 @@
-package ch11.ex04_queue;
+package ch11.ex04_Queue;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.util.*;

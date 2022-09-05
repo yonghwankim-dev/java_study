@@ -1,4 +1,4 @@
-package ch11.ex04_queue;
+package ch11.ex04_Queue;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,8 +1,6 @@
-package ch11.ex03_stack;
+package ch11.ex03_Stack;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class WebBrowserBackForwardTest {
     @Test

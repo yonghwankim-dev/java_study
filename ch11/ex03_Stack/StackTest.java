@@ -1,6 +1,5 @@
-package ch11.ex03_stack;
+package ch11.ex03_Stack;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.util.ArrayList;

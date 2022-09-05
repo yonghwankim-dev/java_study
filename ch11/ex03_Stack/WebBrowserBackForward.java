@@ -1,6 +1,5 @@
-package ch11.ex03_stack;
+package ch11.ex03_Stack;
 
-import javax.swing.*;
 import java.util.Stack;
 
 // 웹 브라우저의 뒤로, 앞으로 기능을 구현한 클래스

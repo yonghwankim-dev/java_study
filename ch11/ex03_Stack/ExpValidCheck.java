@@ -1,4 +1,4 @@
-package ch11.ex03_stack;
+package ch11.ex03_Stack;
 
 import java.util.EmptyStackException;
 import java.util.Stack;
