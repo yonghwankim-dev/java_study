@@ -79,6 +79,13 @@
   6.4 File  
 7. [\[Java\]\[I/O\] 직렬화(Serialization)](https://yonghwankim-dev.tistory.com/457)
 
+### Other
+Optional
+1. [\[Java\]\[Optional\] Optional 클래스를 통한 Null 처리](https://yonghwankim-dev.tistory.com/566)
+2. [\[Java\]\[Optional\] Optional의 위험 및 사용 가이드](https://yonghwankim-dev.tistory.com/567)
+
+
+
 
 ## Reference
 [Java의 정석 3rd](https://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=249927409&gclid=CjwKCAjwquWVBhBrEiwAt1KmwnnLk5f64TVfd49uJJy08e3Fn37ePGXCwRFkW-zl_0XbTqVSFq0jlRoCr3oQAvD_BwE)
