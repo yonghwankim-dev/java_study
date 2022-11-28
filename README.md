@@ -29,6 +29,9 @@
 6. [\[Java\]\[time\] Period와 Duration 클래스](https://yonghwankim-dev.tistory.com/449)
 7. [\[Java\]\[time\] DateTimeFormatter 클래스의 파싱과 포맷](https://yonghwankim-dev.tistory.com/450)
 
+### Chapter 11. 컬렉션 프레임웤(Collection Framework)
+1. [\[java\]\[Collection Framework\] 컬렉션 프레임웤(Collection Framework)](https://github.com/yonghwankim-dev/java_study/tree/main/ch11)
+
 ### Chapter 12. 지네릭스, 열거형, 애너테이션(Generics, Enums, Annotation)
 1. [\[Java\]\[Generics\] 지네릭스(Generics)](https://yonghwankim-dev.tistory.com/491)
 2. [\[Java\]\[enums\] 열거형(enums)](https://yonghwankim-dev.tistory.com/502)
@@ -75,6 +78,13 @@
   6.3 RandomAccessFile  
   6.4 File  
 7. [\[Java\]\[I/O\] 직렬화(Serialization)](https://yonghwankim-dev.tistory.com/457)
+
+### Other
+Optional
+1. [\[Java\]\[Optional\] Optional 클래스를 통한 Null 처리](https://yonghwankim-dev.tistory.com/566)
+2. [\[Java\]\[Optional\] Optional의 위험 및 사용 가이드](https://yonghwankim-dev.tistory.com/567)
+
+
 
 
 ## Reference
