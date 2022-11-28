@@ -4,6 +4,7 @@ import ch07.ex_24_interface.Unit;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
@@ -110,6 +111,100 @@ public class PersonTest {
     private String getDefaultName(){
         System.out.println("call getDefaultName()");
         return "anonymous";
+    }
+
+    @Test(expected = NoSuchElementException.class)
+    public void testNoSuchElementException(){
+        //given
+        Optional<String> optional = Optional.ofNullable(null);
+        //when
+        String actual = optional.get();
+        //then
+        fail("NoSuchElementException이 발생해야함");
+    }
+
+    @Test
+    public void testIfPresent(){
+        //given
+        Optional<String> optional = Optional.ofNullable(null);
+        String actual = "";
+        //when
+        if(optional.isPresent()){
+            actual = optional.get();
+        }else{
+            actual = "default";
+        }
+        //then
+        assertThat(actual).isEqualTo("default");
+    }
+
+    @Test
+    public void testIfPresent_whenOptionalIsNull(){
+        //given
+        Optional<String> optional = null;
+        String actual = "";
+        //when
+        if(optional != null && optional.isPresent()){
+            actual = optional.get();
+        }else{
+            actual = "default";
+        }
+        //then
+        assertThat(actual).isEqualTo("default");
+    }
+
+    // AVOID
+    @Test
+    public void testFindStudentName_isPresentAndGet(){
+        //given
+        Optional<String> optionalStudentName = Optional.ofNullable(null);
+        String actual;
+        //when
+        if(optionalStudentName.isPresent()){
+            actual = optionalStudentName.get();
+        }else{
+            actual = findDefaultName();
+        }
+        //then
+        assertThat(actual).isEqualTo("defaultName");
+    }
+
+    // PREFER
+    @Test
+    public void testFindStudentName_orElseGet(){
+        //given
+        Optional<String> optionalStudentName = Optional.ofNullable(null);
+        //when
+        String actual = optionalStudentName.orElseGet(()->findDefaultName());
+        //then
+        assertThat(actual).isEqualTo("defaultName");
+    }
+
+    private String findDefaultName(){
+        return "defaultName";
+    }
+
+
+    @Test
+    public void Optional클래스낭비(){
+        //given
+
+        //when
+        String studentName = findStudentName(1L);
+        //then
+        assertThat(studentName).isEqualTo("김용환");
+    }
+
+    // AVOID
+//    private String findStudentName(Long id){
+//        String name = "김용환"; // 저장소로부터 값을 얻었다고 가정
+//        return Optional.ofNullable(name).orElse("미정");
+//    }
+
+    // PREFER
+    private String findStudentName(Long id){
+        String name = "김용환"; // 저장소로부터 값을 얻었다고 가정
+        return name == null ? "미정" : name;
     }
 
 }
