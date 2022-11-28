@@ -3,17 +3,6 @@ package toy.toy_04_gugudan;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-/**
- * title : 구구단 프로그램
- * content
- * - 단수를 입력받으면 해당 단의 구구단을 출력
- * - 구구단의 시작과 종료를 선택적으로 입력할 수 있음
- * example
- * - 3 2 9 => 3*2=6 ... 3*9=27 출력			
- * @author qkdlf
- *
- */
 public class Driver {
 	public static void main(String[] args)
 	{

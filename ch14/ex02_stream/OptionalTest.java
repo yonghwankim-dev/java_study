@@ -92,6 +92,7 @@ public class OptionalTest {
         assertThat(actual1).isEqualTo(123);
         assertThat(actual2).isEqualTo(-1);
     }
+
     // 문자열의 길이가 0보다 크면 정수로 변환하여 반환, 0보다 같거나 작으면 -1 반환
     private static int getInteger(String s){
         return Optional.of(s)
@@ -211,7 +212,4 @@ public class OptionalTest {
 //        opt2.getAsInt(); // NoSuchElementException 예외 발생
         assertThat(opt1.equals(opt2)).isFalse();
     }
-
-
-
 }
