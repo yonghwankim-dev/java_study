@@ -10,8 +10,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class EllisTest {
 
     Ellis ellis;
-    Beverage beverage;
-    Cake cake;
+    Food beverage;
+    Food cake;
     Fan fan;
 
     @Before
@@ -32,7 +32,7 @@ public class EllisTest {
         field.setAccessible(true);
         int height = (int) field.get(ellis);
 
-        field = beverage.getClass().getDeclaredField("quantity");
+        field = beverage.getClass().getSuperclass().getDeclaredField("quantity");
         field.setAccessible(true);
         double quantity = (double) field.get(beverage);
 
@@ -50,7 +50,7 @@ public class EllisTest {
         field.setAccessible(true);
         int height = (int) field.get(ellis);
 
-        field = cake.getClass().getDeclaredField("quantity");
+        field = cake.getClass().getSuperclass().getDeclaredField("quantity");
         field.setAccessible(true);
         double quantity = (double) field.get(cake);
 

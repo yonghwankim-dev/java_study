@@ -3,8 +3,8 @@ package toy.toy_07_ellis;
 public class Ellis {
     private String position;
     private int height;
-    private Beverage beverage;
-    private Cake cake;
+    private Food beverage;
+    private Food cake;
     private Fan fan;
     private Key key;
 
@@ -15,7 +15,7 @@ public class Ellis {
 
     // 음료를 먹으면 엘리스의 키가 24cm로 작아짐
     public void drinkBeverage(){
-        beverage.drunken(0.5);
+        beverage.eaten(0.5);
         this.height = 24;
     }
 
@@ -48,11 +48,11 @@ public class Ellis {
         return this.key != null;
     }
 
-    public void setBeverage(Beverage beverage) {
+    public void setBeverage(Food beverage) {
         this.beverage = beverage;
     }
 
-    public void setCake(Cake cake) {
+    public void setCake(Food cake) {
         this.cake = cake;
     }
 
