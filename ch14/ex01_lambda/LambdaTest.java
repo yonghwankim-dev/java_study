@@ -1,14 +1,11 @@
 package ch14.ex01_lambda;
 
-import ch07.ex_28_interfacePolymorphism4.I;
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.util.*;
 import java.util.function.*;
-import java.util.stream.IntStream;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class LambdaTest {
     static int execute(MyFunction f){ // 매개변수의 타입인 MyFunction인 메서드
@@ -186,7 +183,7 @@ public class LambdaTest {
     }
 
     @Test
-    public void Predicate결합_테스트() throws Exception{
+    public void predicate_conbine_test() throws Exception{
         //given
         Function<String, Integer> f = (s) -> Integer.parseInt(s, 16);
         Function<Integer, String> g = (i) -> Integer.toBinaryString(i);
@@ -222,7 +219,7 @@ public class LambdaTest {
     }
 
     @Test
-    public void 메서드의참조_테스트() throws Exception{
+    public void methodReference_test() throws Exception{
         //given
         Function<String, Integer> f1 = (String s) -> Integer.parseInt(s);
         Function<String, Integer> f2 = Integer::parseInt;
@@ -247,7 +244,7 @@ public class LambdaTest {
     }
 
     @Test
-    public void 생성자의메서드참조_테스트() throws Exception{
+    public void constructorMethodReference() throws Exception{
         //given
         // 공백 생성자 메서드 참조
         Supplier<Person> s1 = () -> new Person();   // 람다식

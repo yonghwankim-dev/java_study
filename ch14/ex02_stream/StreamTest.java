@@ -113,7 +113,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 빈스트림_empty_테스트()  {
+    public void emptyStream_empty_test()  {
         //given
         Stream emptyStream = Stream.empty();
 
@@ -124,7 +124,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림의연결_concat_테스트()  {
+    public void streamConcat_concat_test()  {
         //given
         String[] str1 = {"123", "456", "789"};
         String[] str2 = {"ABC", "DEF", "GHI"};
@@ -142,7 +142,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림자르기_skip_limit_테스트()  {
+    public void streamSlice_skip_limit_test()  {
         //given
         IntStream intStream = IntStream.rangeClosed(1, 10); // 1~10
         //when
@@ -152,7 +152,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림요소걸러내기_distinct_테스트() {
+    public void streamElementFilter_distinct_test() {
         //given
         IntStream intStream = IntStream.of(1,2,2,3,3,3,4,5,5,6);
         //when
@@ -162,7 +162,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 스트림요소걸러내기_filter_테스트() {
+    public void streamElementFilter_test() {
         //given
         IntStream intStream = IntStream.rangeClosed(1,10);
         IntStream intStream2 = IntStream.rangeClosed(1,10);
@@ -178,7 +178,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 정렬_sorted_테스트() {
+    public void sorted_test() {
         //given
         Stream<String> strStream = Stream.of("dd", "aaa", "CC", "cc", "b");
         StringBuilder sb = new StringBuilder();
@@ -191,7 +191,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 정렬_sorted_Comparator_테스트() {
+    public void sorted_Comparator_test() {
         //given
         Stream<String>[] strStreams = new Stream[11];
         String[] actualArray = new String[11];
@@ -241,19 +241,19 @@ public class StreamTest {
     }
 
     @Test
-    public void 정렬_thenComparing_테스트() {
+    public void sort_thenComparing_test() {
         //given
         Stream<Student> studentStream = Stream.of(new Student("김용환", 1, 100),
-                                                  new Student("이경수",1, 150),
-                                                  new Student("홍길동",2,125));
+                new Student("이경수",1, 150),
+                new Student("홍길동",2,125));
         StringBuilder sb = new StringBuilder();
         String actual;
         //when
         // 학생 스트림을 반별, 성적순, 이름순으로 정렬
         studentStream.sorted(Comparator.comparing(Student::getBan)
-                                       .thenComparing(Student::getTotalScore)
-                                       .thenComparing(Student::getName))
-                     .forEach((s)->sb.append(s.getName()+" "));
+                        .thenComparing(Student::getTotalScore)
+                        .thenComparing(Student::getName))
+                .forEach((s)->sb.append(s.getName()+" "));
 
         actual = sb.toString().trim();
         //then
@@ -261,7 +261,7 @@ public class StreamTest {
     }
 
     @Test
-    public void sorted_객체정렬_thenComparing_테스트() {
+    public void sorted_objectSort_thenComparing_test() {
         //given
         Student[] students = {
                 new Student("이자바",3,300),
@@ -276,8 +276,8 @@ public class StreamTest {
         List<String> actualList = Arrays.asList("김자바","소자바","박자바","안자바","이자바","나자바","감자바");
         //when
         List<Student> studentList = studentStream.sorted(Comparator.comparing(Student::getBan)
-                                                                    .thenComparing(Comparator.naturalOrder()))
-                                                 .collect(Collectors.toList());
+                        .thenComparing(Comparator.naturalOrder()))
+                .collect(Collectors.toList());
         //then
         IntStream.rangeClosed(0, actualList.size()-1).forEach((i)->{
             assertThat(studentList.get(i).getName()).isEqualTo(actualList.get(i));
@@ -285,13 +285,13 @@ public class StreamTest {
     }
 
     @Test
-    public void 변환_map_테스트() {
+    public void map_test() {
         //given
         File[] files = {new File("Ex1.java"),
-                        new File("Ex1"),
-                        new File("Ex1.bak"),
-                        new File("Ex2.java"),
-                        new File("Ex1.txt")};
+                new File("Ex1"),
+                new File("Ex1.bak"),
+                new File("Ex2.java"),
+                new File("Ex1.txt")};
         Stream<File> fileStream = Stream.of(files);
         //when
         Stream<String> fileNameStream = fileStream.map(File::getName);
@@ -301,7 +301,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 변환_map_확장자만추출_테스트() {
+    public void map_extension_test() {
         //given
         File[] files = {new File("Ex1.java"),
                 new File("Ex1"),
@@ -311,18 +311,18 @@ public class StreamTest {
         Stream<File> fileStream = Stream.of(files);
         //when
         String[] actual = fileStream.map(File::getName)                               // 파일이름 추출
-                                    .filter(s -> s.indexOf(".") != -1)                // 확장자가 없는 것은 제외
-                                    .map(s->s.substring(s.indexOf(".")+1))  // Stream<String>->Stream<String>
-                                    .map(String::toUpperCase)                        // 모두 대문자로 변환
-                                    .distinct()                                      //중복제거
-                                    .collect(Collectors.joining(" "))        // 공백을 구분자로 문자열로 모음
-                                    .split(" ");                               // 공백을 기준으로 문자열 배열 생성
+                .filter(s -> s.indexOf(".") != -1)                // 확장자가 없는 것은 제외
+                .map(s->s.substring(s.indexOf(".")+1))  // Stream<String>->Stream<String>
+                .map(String::toUpperCase)                        // 모두 대문자로 변환
+                .distinct()                                      //중복제거
+                .collect(Collectors.joining(" "))        // 공백을 구분자로 문자열로 모음
+                .split(" ");                               // 공백을 기준으로 문자열 배열 생성
         //then
         assertThat(actual).isEqualTo(new String[]{"JAVA", "BAK", "TXT"});
     }
 
     @Test
-    public void 조회_peek_테스트() {
+    public void search_peek_test() {
         //given
         File[] files = {new File("Ex1.java"),
                 new File("Ex1"),
@@ -347,7 +347,7 @@ public class StreamTest {
     }
 
     @Test
-    public void 변환_mapToInt_테스트() {
+    public void map_mapToInt_test() {
         //given
         Student[] students = getStudents();
         Stream<Student> studentStream = Stream.of(students);
@@ -421,7 +421,7 @@ public class StreamTest {
         assertThat(minScore).isEqualTo(100);
         assertThat(maxScore).isEqualTo(300);
     }
-    
+
     @Test
     public void IntStream_mapToObj() {
         //given
@@ -429,9 +429,9 @@ public class StreamTest {
 
         //when
         Stream<String> lottoStream = intStream.distinct()
-                                              .limit(6)
-                                              .sorted()
-                                              .mapToObj(i->i+","); // 정수를 문자열로 변환
+                .limit(6)
+                .sorted()
+                .mapToObj(i->i+","); // 정수를 문자열로 변환
         //then
         lottoStream.forEach(System.out::print);
     }
@@ -440,8 +440,8 @@ public class StreamTest {
     public void flatMap1() {
         //given
         Stream<String[]> strArrStrm = Stream.of(
-          new String[]{"abc","def","ghi"},
-          new String[]{"ABC","GHI","JKLMN"}
+                new String[]{"abc","def","ghi"},
+                new String[]{"ABC","GHI","JKLMN"}
         );
         //when
 //        Stream<Stream<String>> strStrStream = strArrStrm.map(Arrays::stream); // (x)
@@ -482,10 +482,10 @@ public class StreamTest {
         Stream<String> strStream = lineStream.flatMap(line->Stream.of(line.split(" ")));
         //when
         String[] actual = strStream.map(String::toLowerCase)
-                                   .distinct()
-                                   .sorted()
-                                   .collect(Collectors.joining(" "))
-                                   .split(" ");
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(" "))
+                .split(" ");
 
         //then
         assertThat(actual).isEqualTo(new String[]{"belive", "do", "is", "it", "no", "not", "or", "there", "true", "try"});
@@ -502,9 +502,9 @@ public class StreamTest {
 
         //when
         String[] actual = strmStrm.map(s->s.toArray(String[]::new)) // Stream<Stream<String>> -> Stream<String[]>
-                                  .flatMap(Arrays::stream)// Stream<String[]> -> Stream<String>
-                                  .collect(Collectors.joining(" "))
-                                  .split(" ");
+                .flatMap(Arrays::stream)// Stream<String[]> -> Stream<String>
+                .collect(Collectors.joining(" "))
+                .split(" ");
 
         //then
         assertThat(actual).isEqualTo(new String[]{"abc","def","jklmn","ABC","GHI","JKLMN"});
