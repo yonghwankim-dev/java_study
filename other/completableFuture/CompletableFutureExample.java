@@ -248,6 +248,19 @@ public class CompletableFutureExample {
         Assertions.assertThat(actual).isEqualTo("Hello World");
     }
 
+    @Test
+    public void testcase19() throws ExecutionException, InterruptedException {
+        //given
+        CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
+            System.out.println("hello world");
+        });
+        //when
+        System.out.println("call");
+        future.get();
+        //then
+
+    }
+
     
     @Test
     public void runAsync() throws ExecutionException, InterruptedException {
@@ -258,4 +271,6 @@ public class CompletableFutureExample {
         //then
         System.out.println("Thread: " + Thread.currentThread().getName());
     }
+
+
 }
