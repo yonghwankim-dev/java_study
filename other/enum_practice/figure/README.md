@@ -133,12 +133,19 @@ public enum FigureType {
 FigureCreator 구현 클래스를 이용하여 Line, Triangle, Rectangle 객체를 생성할 수 있습니다.
 
 ```java
+import other.enum_practice.figure.src.FigureCreator;
+import other.enum_practice.figure.src.Line;
+
 public class FigureFactory {
 
     private static final Map<Integer, FigureCreator> figureTypeMap = new HashMap<>();
 
     static {
-        figureTypeMap.put(FigureType.LINE.getCountOfPoint(), Line::new);
+        figureTypeMap.put(FigureType.LINE.getCountOfPoint(), new FigureCreator() {
+            public Figure create(List<Point> points) {
+                return new Line(points);
+            }
+        });
         figureTypeMap.put(FigureType.TRIANGLE.getCountOfPoint(), Triangle::new);
         figureTypeMap.put(FigureType.RECTANGLE.getCountOfPoint(), Rectangle::new);
     }
@@ -152,3 +159,8 @@ public class FigureFactory {
     }
 }
 ```
+
+위와 같이 FigureCreator 인터페이스를 익명 클래스로 직접 구현하는 팩토리 객체를 생성할 수 있고
+
+람다로 Triangle::new 와 같이 표현할 수도 있습니다.
+
