@@ -1,20 +1,20 @@
-package other.enum_practice.figure.src;
+package enum_practice.figure.src;
 
 import java.util.List;
 
-public class Line extends AbstractFigure {
-    public Line(List<Point> points) {
+public class Rectangle extends AbstractFigure {
+    public Rectangle(List<Point> points) {
         super(points);
     }
 
     @Override
     public int size() {
-        return 2;
+        return 4;
     }
 
     @Override
     public String getName() {
-        return "선";
+        return "사각형";
     }
 
     @Override

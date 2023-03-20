@@ -18,9 +18,11 @@
 8. [\[Java\] 7. 객체지향 프로그래밍 2 #8 내부 클래스(Inner Class)](https://yonghwankim-dev.tistory.com/384)
 
 ### Chapter 8. 예외 처리(Exception Handling)
+
 1. [\[Java\] 8. 예외처리(exception handling)](https://yonghwankim-dev.tistory.com/427)
 
 ### Chapter 10. 날짜와 시간 & 형식화 date, time and formatting
+
 1. [\[Java\]\[time\] 날짜와 시간 : Calendar, Date](https://yonghwankim-dev.tistory.com/444)
 2. [\[Java\]\[time\] 형식화 클래스 : DecimalFormat, SimpleDateFormat, ChoiceFormat, MessageFormat](https://yonghwankim-dev.tistory.com/445)
 3. [\[Java\]\[time\] LocalDate와 LocalTime 클래스](https://yonghwankim-dev.tistory.com/446)
@@ -30,13 +32,16 @@
 7. [\[Java\]\[time\] DateTimeFormatter 클래스의 파싱과 포맷](https://yonghwankim-dev.tistory.com/450)
 
 ### Chapter 11. 컬렉션 프레임웤(Collection Framework)
+
 1. [\[java\]\[Collection Framework\] 컬렉션 프레임웤(Collection Framework)](https://github.com/yonghwankim-dev/java_study/tree/main/ch11)
 
 ### Chapter 12. 지네릭스, 열거형, 애너테이션(Generics, Enums, Annotation)
+
 1. [\[Java\]\[Generics\] 지네릭스(Generics)](https://yonghwankim-dev.tistory.com/491)
 2. [\[Java\]\[enums\] 열거형(enums)](https://yonghwankim-dev.tistory.com/502)
 
 ### Chapter 13. 쓰레드(Thread)
+
 1. [\[Java\]\[Thread\] 프로세스와 쓰레드](https://yonghwankim-dev.tistory.com/458)
 2. [\[Java\]\[Thread\] 쓰레드의 구현과 실행](https://yonghwankim-dev.tistory.com/459)
 3. [\[Java\]\[Thread\] 쓰레드 클래스의 start()와 run() 메서드](https://yonghwankim-dev.tistory.com/463)
@@ -51,43 +56,48 @@
 12. [\[Java\]\[Thread\] 쓰레드의 동기화 #4 fork & join 프레임워크](https://yonghwankim-dev.tistory.com/474)
 
 ### Chapter 14. 람다와 스트림
+
 1. [\[java\]\[lambda\] 람다식(Lambda Expression)](https://yonghwankim-dev.tistory.com/511)
 2. [\[java\]\[lamdba\] 스트림(Stream)](https://github.com/yonghwankim-dev/java_study/tree/main/ch14/ex02_stream)
 
-
 ### Chapter 15. 입출력(I/O)
+
 1. [\[Java\]\[I/O\] 자바에서의 입출력](https://yonghwankim-dev.tistory.com/451)
 2. [\[Java\]\[I/O\] 바이트기반 스트림, InputStream & OutputStream](https://yonghwankim-dev.tistory.com/452)
 3. [\[Java\]\[I/O\] 바이트기반의 보조 스트림](https://yonghwankim-dev.tistory.com/453)  
-  3.1 FilterInputStream & FilterOutputStream  
-  3.2 BufferedInputStream & BufferedOutputStream  
-  3.3 DataInputStream & DataOutputStream  
-  3.4 SequenceInputStream  
-  3.5 PrintStream  
+   3.1 FilterInputStream & FilterOutputStream  
+   3.2 BufferedInputStream & BufferedOutputStream  
+   3.3 DataInputStream & DataOutputStream  
+   3.4 SequenceInputStream  
+   3.5 PrintStream
 4. [\[Java\]\[I/O\] 문자기반 스트림 Reader와 Writer](https://yonghwankim-dev.tistory.com/454)  
-  4.1 Reader & Writer  
-  4.2 FileReader & FileWriter  
-  4.3 PipedReader & PipedWriter  
-  4.4 StringReader & StringWriter  
+   4.1 Reader & Writer  
+   4.2 FileReader & FileWriter  
+   4.3 PipedReader & PipedWriter  
+   4.4 StringReader & StringWriter
 5. [\[Java\]\[I/O\] 문자기반의 보조스트림](https://yonghwankim-dev.tistory.com/455)  
-  5.1 BufferedReader & BufferedWriter  
-  5.2 InputStreamReader & OutputStreamWriter  
+   5.1 BufferedReader & BufferedWriter  
+   5.2 InputStreamReader & OutputStreamWriter
 6. [\[Java\]\[I/O\] 표준입출력과 File](https://yonghwankim-dev.tistory.com/456)  
-  6.1 System.in, System.out, System.err  
-  6.2 setOut(), setErr(), setIn()  
-  6.3 RandomAccessFile  
-  6.4 File  
+   6.1 System.in, System.out, System.err  
+   6.2 setOut(), setErr(), setIn()  
+   6.3 RandomAccessFile  
+   6.4 File
 7. [\[Java\]\[I/O\] 직렬화(Serialization)](https://yonghwankim-dev.tistory.com/457)
 
+### enum
+
+1. [enum 리팩토링](enum_practice/figure/README.md)
+
 ### Other
+
 Optional
+
 1. [\[Java\]\[Optional\] Optional 클래스를 통한 Null 처리](https://yonghwankim-dev.tistory.com/566)
 2. [\[Java\]\[Optional\] Optional의 위험 및 사용 가이드](https://yonghwankim-dev.tistory.com/567)
 
-
-
-
 ## Reference
+
 [Java의 정석 3rd](https://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=249927409&gclid=CjwKCAjwquWVBhBrEiwAt1KmwnnLk5f64TVfd49uJJy08e3Fn37ePGXCwRFkW-zl_0XbTqVSFq0jlRoCr3oQAvD_BwE)
 
 

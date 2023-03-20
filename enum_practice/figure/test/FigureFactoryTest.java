@@ -1,15 +1,15 @@
-package other.enum_practice.figure.test;
+package enum_practice.figure.test;
 
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
-import other.enum_practice.figure.src.Figure;
-import other.enum_practice.figure.src.FigureFactory;
-import other.enum_practice.figure.src.Line;
-import other.enum_practice.figure.src.Point;
-import other.enum_practice.figure.src.Rectangle;
-import other.enum_practice.figure.src.Triangle;
+import enum_practice.figure.src.Figure;
+import enum_practice.figure.src.FigureFactory;
+import enum_practice.figure.src.Line;
+import enum_practice.figure.src.Point;
+import enum_practice.figure.src.Rectangle;
+import enum_practice.figure.src.Triangle;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

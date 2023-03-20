@@ -1,4 +1,4 @@
-package other.enum_practice.figure.src;
+package enum_practice.figure.src;
 
 import java.util.Arrays;
 

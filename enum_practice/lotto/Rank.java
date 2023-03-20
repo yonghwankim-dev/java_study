@@ -1,4 +1,4 @@
-package other.enum_practice.lotto;
+package enum_practice.lotto;
 
 public enum Rank {
     FIRST(6, 2000000000),

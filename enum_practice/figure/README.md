@@ -133,8 +133,8 @@ public enum FigureType {
 FigureCreator 구현 클래스를 이용하여 Line, Triangle, Rectangle 객체를 생성할 수 있습니다.
 
 ```java
-import other.enum_practice.figure.src.FigureCreator;
-import other.enum_practice.figure.src.Line;
+import enum_practice.figure.src.FigureCreator;
+import enum_practice.figure.src.Line;
 
 public class FigureFactory {
 
